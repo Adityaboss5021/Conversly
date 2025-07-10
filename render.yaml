@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: conversly
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://adityaboss5021:ZOS9OHVooQjW7yDx@conversly.tjc3f8q.mongodb.net/conversly?retryWrites=true&w=majority&appName=Conversly
+      - key: PORT
+        value: 10000
